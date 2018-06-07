@@ -1,0 +1,14 @@
+<div class="card text-center">
+  <div class="card-header">
+    Stock Overview
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Number of Stock Bets Made: {{faveStocks.length}}</h4>
+    <h3>
+      <span class="badge badge-primary rounded-circle p-2 m-2" *ngFor="let selectedStocks of faveStocks">
+        {{selectedStocks}}
+      </span>
+    </h3>
+
+  </div>
+</div>

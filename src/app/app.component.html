@@ -1,11 +1,21 @@
-<div id="container">
-  <app-stock-overview [addedStock]="addedStock"></app-stock-overview>
-
-  <div *ngFor="let stock of stocks">
-    <app-stock-card [title]="stock.tickerCode" [companyName]="stock.companyName" [imgUrl]="stock.imgUrl"
-                    (addToList)="addedStock=$event"
-    >
-
-    </app-stock-card>
+<div class="container justify-content-center">
+  <div class="p-3 mt-3" style="text-align:center">
+    <h1>Stocks Bet!</h1>
   </div>
+
+  <app-stock-overview [addedStock]="addedStock"> </app-stock-overview>
+
+  <hr />
+  <div class="row justify-content-center">
+
+    <div class="card-group " *ngFor="let stock of stocks">
+
+      <app-stock-card [title]="stock.tickerCode" [companyName]="stock.companyName" [imgUrl]="stock.imgUrl"
+                      (addToList)="addedStock = $event">
+      </app-stock-card>
+
+    </div>
+
+  </div>
+
 </div>

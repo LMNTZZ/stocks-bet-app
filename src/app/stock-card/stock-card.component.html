@@ -1,0 +1,10 @@
+<div id="container">
+  <div class="card text-center p-2 m-2" [ngStyle]="{ 'background-color': background_color } " style="width: 22rem;">
+    <img class="card-img-top" src="{{imageUrl}}" alt="{{title}}">
+    <div class="card-body">
+      <h4 class="card-title">{{title}}</h4>
+      <p class="card-text">{{companyName }}</p>
+      <button (click)="selectCard()" class="btn btn-lg btn-primary">{{btnLabel}}</button>
+    </div>
+  </div>
+</div>
